@@ -1,0 +1,27 @@
+{% extends 'core/core.html' %}
+{% load static %}
+{% block headdata %}
+
+<link rel="stylesheet" href=" {% static 'home/css/font.css' %} ">
+
+{% endblock headdata %}
+
+
+
+{% block body %}
+
+<div class="container mx-6 text-center   my-4">
+    <div class="row ">
+        <div class="col-lg-4 mx-auto">
+         
+          <h2>LOCATION</h2>
+             
+          </div>
+          <p class="mx-auto"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.265866585809!2d77.22092561424749!3d28.59179988243387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd309eebed77%3A0x5a24156b4c014fbf!2sUNICEF!5e0!3m2!1sen!2sin!4v1607800269869!5m2!1sen!2sin" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></p>
+</div>
+
+{% block footer %}
+
+{% endblock footer %}
+
+{% endblock body  %}

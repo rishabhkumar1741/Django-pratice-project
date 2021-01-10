@@ -1,0 +1,99 @@
+{% extends 'core/core.html' %}
+{% load static %}
+{% block headdata %}
+
+<link rel="stylesheet" href=" {% static 'home/css/font.css' %} ">
+
+{% endblock headdata %}
+
+
+
+{% block body %}
+
+<div class="container my-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well well-sm">
+                                        <form action="https://ngodarpan.gov.in/index.php/home/submit_contact" class="form-horizontal" name="contactform" id="contactform" method="post">
+                            <input type="hidden" name="csrf_test_name" value="c93c744e86f1db7d8a1417235281fdca" id="token">
+                            <legend class="text-center header">Contact us</legend>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="name" required="" name="name" maxlength="30" autocomplete="off" type="text" placeholder="Enter your First Name" class="form-control" onblur="chkname('name',this.value);" value="">
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="email_contact" required="" name="email" autocomplete="off" type="text" placeholder="Enter your Email Address" onblur="chkname('email',this.value);" class="form-control" value="">
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="subject" class="form-control" maxlength="50" required="" autocomplete="off" name="subject" placeholder="Enter Your Subject" type="text" onblur="chkname('subject',this.value);" value="">
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <textarea class="form-control" onblur="chkname('message',this.value);" maxlength="500" required="" autocomplete="off" name="message" id="message" rows="4" placeholder="Your Message"></textarea>
+                                    <span class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                <div id="captchaimagehere55" style="float: left; margin-bottom: 15px;"><img src="https://ngodarpan.gov.in/captcha/1607881999.2812.jpg" style="width: 220; height: 40; border: 0;" alt=" "></div>
+                                <div class="col-md-4"><a href="javascript:void(0)" class="refresh3" style="margin-right:50px;"><img width="40px" height="40px" id="ref_symbol" src="https://ngodarpan.gov.in/assets/images/reload.png"></a></div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                <input type="text" autocomplete="off" name="security" id="security" class="form-control" placeholder="Enter Security Code Display Above" data-error="Please Enter Security Code!" value="" onblur="chkname('security',this.value);" maxlength="6">
+                                <span class="text-danger"></span>
+                                <div class="help-block with-errors"></div>
+                                <div style="display:none;color:#a94442;" class="captcha_error2 help-block"><ul class="list-unstyled"><li>Security code was not match, please try again!</li></ul>
+                                </div>
+                                </div>  
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" name="submit" id="contact_btn" class="btn btn-primary btn-lg">Submit</button>
+                                </div>
+                            </div>
+                    </form>            </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <div class="panel panel-default">
+                        <div class="text-center header"><h4>Our Office</h4></div>
+                        <div class="panel-body text-center">
+                            <div>
+                            Voluntary Action Cell<br>
+                            NITI Aayog <br>
+                            Room No. 316<br>
+                            NITI Aayog, Sansad Marg <br>
+                            New Delhi-110 001<br>
+                            <b>Tele:</b>  011-23042707 <br>
+                            <b>Email:</b> ngo[at]india[dot]gov[dot]in<br>
+                            <br><b>New Helpdesk Number (hunting number): 14414 <br>(Will remain operational on all working days from 9:30 AM to 05:30 PM)  </b> <br>
+    
+                            </div>
+                            <hr>
+                            <div id="map111" class="map" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+{% block footer %}
+
+{% endblock footer %}
+
+{% endblock body  %}

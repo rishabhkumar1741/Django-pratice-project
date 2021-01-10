@@ -1,0 +1,117 @@
+{% extends 'core/core.html' %}
+
+{% load static %}
+{% block headdata %}
+
+<link rel="stylesheet" href=" {% static 'home/css/font.css' %} ">
+
+{% endblock headdata %}
+
+
+{% block title %}
+education
+{% endblock title %}
+
+{% block body %}
+<div class="card bg-dark text-white">
+    <img src="{% static 'home/img/9.jpeg'%}" class="card-img" alt="...">
+    <div class="card-img-overlay">
+        <h5 class="card-title text-center my-5 text-white">Educate a poor rural child
+          in need</h5>
+        <p class="card-text text-center">Donations will sponsor the tuition and school supplies for a child.</p>
+        
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row ">
+        <div class="col ">
+            <h3 class="eve text-center my-3">Sponsor a child in India</h3>
+            <p class="text-center my-3">
+                When you sponsor a child with ActionAid, you not only help the child in need but also transform the
+                lives of children in the community where the sponsored child lives, by ensuring they get access to
+                quality education, proper nutrition, healthcare and protection. Your sponsorship also helps poor and
+                vulnerable communities to build a more enabling context for their children to be protected and cared
+                for.
+
+                Working with grassroots-based organisations, we strive towards making vulnerable communities aware of
+                constitutional values and their rights including the rights of children. Your sponsorship empowers our
+                efforts to save the children in poor communities from crimes like child trafficking, child labour and
+                child marriage. Essentially, you help children become better citizens for a better tomorrow.
+            </p>
+            <h3 class="eve text-center my-3">What is child sponsorship?</h3>
+            <p class="text-center my-3">
+                Child sponsorship is a regular giving program, wherein your (monthly/quarterly/half yearly/annual)
+                contribution ensures education, healthcare support and a safe childhood to children from the most
+                marginalized communities in India. By children, we mean not just children in poor communities but also
+                orphans, disabled, children with learning disabilities, children in conflict situations and children
+                with limited or no access to schools or basic facilities.
+
+                The sponsored child keeps you informed about the progress made in their lives and that of the community.
+                To effectively leverage the sponsored child’s efforts as an ambassador of the community in which he or
+                she lives, we link each child to up to three donors.
+            </p>
+            <h3 class="eve text-center my-3">Become a regular donor</h3>
+            <p class="text-center my-3">
+                Regular giving (or direct debit) helps us to plan for long-term projects. There is an urgent need for
+                regular giving as the people we work with, need help every day. Your regular donation allows us to
+                implement impactful programmes which will bring about a substantial change in their lives.
+            </p>
+            <h3 class="eve text-center my-3">When you sponsor a child</h3>
+            <p class="text-center my-3">
+                You are sponsoring a child’s education, healthcare and protection, and well-being of the community
+                You are not just helping the child go to school but are addressing all the factors that are keeping the
+                child out of it
+                You are also helping build opportunities for the child's family to have a sustainable source of
+                livelihood and income
+            </p>
+            <h3 class="eve text-center my-3">Sponsor a child today and join us on a journey</h3>
+            <p class="text-center my-3">
+                Join us on a journey and see how your support transforms the lives of children and communities. You can
+                donate either on a yearly basis or on a monthly basis.
+
+                For yearly basis, you donate ₹ 9,000 per child per year. For monthly option, you donate ₹750 per child
+                per month through Credit Card Standing Instructions (CCSI) or Automated Clearing House (ACH), whichever
+                mode of payment is preferred although we strongly recommend CCSI to ensure uninterrupted support for
+                your sponsored child. We recommend a minimum of 3-year-long support in the best interest of the child.
+                ActionAid Association is a 12A registered organisation which means 50% of your donations are exempted
+                from tax under Section 80G of the Income Tax Act, 1961
+            </p>
+            <h3 class="eve text-center my-3">Ways to Donate</h3>
+            <p class="text-center my-3">
+                We provide several options for you to donate. Apart from Credit Card and ACH, you also have the option to pay through Cheque, Debit Cards, Net Banking or Mobile Payments. If you are looking at sponsoring through cheque or ACH, please download our sponsorship form, fill it up and post it to us.
+            </p>
+
+
+        </div>
+        <div class="col my-5">
+            <div class="card mx-auto" style="width: 18rem;">
+                <img src="{% static 'home/img/10.jpeg'%}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Educate a poor rural child in need
+                    by 
+                    Isha Education</h5>
+                  <p class="card-text">Your donation will support 1 Child.</p>
+                  <a href="{% url 'payment' %}" class="btn btn-primary">Rs 1480 per month</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card bg-dark text-white">
+      <img src="{% static 'home/img/11.jpeg'%}" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h3 class="col-6">Kids are pillars of the nation, send them to get an education. Stop child labour!.</h3>
+       
+      </div>
+    </div>
+</div>
+
+  
+
+
+
+{% endblock body %}

@@ -1,0 +1,43 @@
+{% extends 'core/core.html' %}
+{% load static %}
+
+{% block headdata %}    
+    
+{% endblock headdata %}
+
+{% block bodyclass %}
+class="bg-dark " 
+{% endblock bodyclass %}  
+
+{% block body %}
+<div class="container text-center my-auto text-white" style="width: 400px" ; >
+    <form class=" text-white form-signin" action="" method="post" novalidate>
+         {% csrf_token %}
+         <div class="text-center">
+            <img src="{% static 'userdata/img/logo.jpeg' %}" class="rounded-circle my-3 " alt="...">
+          </div>
+         <h1>Please log in</h1>
+         {% for fm in form %}
+         <div class="form-group">
+            {{fm.label_tag}}  {{fm}}  <small class="text-warning"> {{fm.errors|striptags}}</small>
+         </div>     
+        
+         {% endfor %}
+         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login">
+         {% if form.non_field.errors %}
+         {% for error in form.non_field.errors %}
+         <p class="alert alert-danger my-3"> {{error}} </p>
+         {% endfor %}
+         {% endif %}
+         <p class="mt-5 mb-3 text-muted">© 2017-2020</p>
+    </form>
+ </div>
+
+
+ {% block footer %}
+ {% endblock footer %}
+
+
+ 
+{% endblock body %}  
+

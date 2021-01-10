@@ -1,0 +1,80 @@
+{% extends 'core/core.html' %}
+{% load static %}
+
+{% block headdata %}    
+    
+{% endblock headdata %}
+
+{% block bodyclass %}
+class="bg-dark " 
+{% endblock bodyclass %}  
+
+{% block body %}
+
+<div class="container">
+   <div class="row">
+     <div class="col-6">
+      <div class="container text-center my-auto text-white" style="width: 400px">
+         {% if messages %}
+         {% for message in messages %}
+         <p {% if message.tags %} class="alert alert-{{message.tags}} my-3 mb-5" {% endif %}> {{message}}</p>
+         {% endfor %}
+         {% endif %}
+      
+          <form class="text-white" action="" method="post" novalidate>
+               {% csrf_token %}
+      
+               <div class="text-center">
+                  <img src="{% static 'userdata/img/logo.jpeg' %}" class="rounded-circle my-3 " alt="...">
+                  <h1>Please sign up</h1>
+                </div>
+               
+      
+      
+               {% for fm in form %}
+               <div class="form-group">
+                  {{fm.label_tag}}  {{fm}}  <small class="text-warning"> {{fm.errors|striptags}}</small>
+               </div>     
+              
+               {% endfor %}
+               <input class="btn btn-primary" type="submit" value="Submit">
+               {% if form.non_field.errors %}
+               {% for error in form.non_field.errors %}
+               <p class="alert alert-danger my-3"> {{error}} </p>
+               {% endfor %}
+               {% endif %}
+          </form>
+       </div>
+     </div>
+
+
+     <div class="col-6 my-4 " >
+      <div class="container  " style="background-size: contain;  width: 100%;" >
+         <img src="{% static 'userdata/img/logo1.jpeg' %}" class="rounded"   alt="">
+
+
+      </div>
+      </div>
+      
+     </div>
+   </div>
+</div>
+
+
+
+
+
+{% block footer %}
+ {% endblock footer %}
+
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}  

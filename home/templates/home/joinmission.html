@@ -1,0 +1,70 @@
+{% extends 'core/core.html' %}
+{% load static %}
+<!-- head od page  -->
+{% block headdata %}
+
+<link rel="stylesheet" href=" {% static 'home/css/font.css' %} ">
+
+{% endblock headdata %}
+
+{% block body %}
+<!-- video -->
+<div class="container">
+    <div class="embed-responsive embed-responsive-4by3 mx-0 " style="height: 400px;">
+        <video class="embed-responsive embed-responsive-4by3" style="height: 400px;" controls autoplay muted>
+            <source src=" {% static 'home/video/1.mp4' %}" type="video/mp4">
+        </video>
+    </div>
+</div>
+<!-- haeding and p -->
+<div class="container">
+    <h4 class="text-center eve my-3">Provide nutritious food for hungry children, now</h4>
+    <p class="tect-center mx-3 px-3 py-3 text-white bg-info rounded">
+        The country has seen large scale devastation as an effect of Covid-19. The pandemic has led to massive losses of
+        income and had a long-lasting impact on the economy. Poor daily wager families who were already struggling to
+        make ends meet are now starving. And the worst-hit are their children - who need not just full stomachs but
+        proper nutrition to grow.
+
+        More than a third of the world’s malnourished children live in India. Now, due to the pandemic, the numbers are
+        only rising. 95.1 million children are deprived of midday meals at school during the pandemic. The State of the
+        World's Children Report 2019 by UNICEF reckons that 69% of deaths among children under five years of age can be
+        attributed to malnutrition in India. It also estimates that every second child up to five years of age is
+        affected by some form of malnutrition. That is just an indication of the level of risk children in this country
+        face in this crisis.
+
+        Through Mission: No Child Hungry, our NGO partners will be distributing monthly nutrition kits to ensure India’s
+        poor children are not malnourished. The kits will contain immunity-boosting formulas, multi-vitamins, iron-rich
+        food items, and food with high protein content including dates, Horlicks, chickpea/green gram/cowpea, ragi
+        flour, etc.
+
+        Provide nutrition for the development and growth of all children. All it takes is ₹1,000 per month to safeguard
+        one child from malnutrition.
+    </p>
+    <div class="bg-success text-white p-3 rounded " role="alert">
+        <h4 class="text-center ">Once you donate, we will send you the name and photo of the child you are supporting.</h4>
+      </div>
+</div>
+<!-- card f -->
+<div class="container my-3">
+    <div class="row">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{% static 'home/img/15.jpeg' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">YOUR CONTRIBUTION CAN SAVE LIVES AMID COVID-19 PANEDMIC</h5>
+              <p class="card-text">FEED A HUNGRY STOMACH.</p>
+              <a href="{% url 'payment' %}" class="btn btn-primary">DONATE NOW</a>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        2 of 2
+      </div>
+    </div>
+</div>
+
+
+
+    
+
+{% endblock body %}

@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock title %}</title>
+  <link rel="stylesheet" href=" {% static 'core/css/bootstrap.css' %} ">
+  {% block headdata %}
+
+  {% endblock headdata %}
+
+</head>
+
+<body {% block bodyclass %} {% endblock bodyclass %}>
+  <div>
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light ">
+      <div class="spinner-grow text-primary" style="width: 0.5rem; height: 0.5rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <a class="navbar-brand" href="/">
+        {% if request.user.is_authenticated %}         
+        WELCOME
+        {% else %}
+        Nayra-auto-mation
+
+        {% endif %}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'joinmission' %}">Join Mission NO Child Hungry <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Cancer Care
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'student' %}">Children</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'education' %}">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'annualreport' %}">Annual Report</a>
+          </li>
+          <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li> -->
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          
+
+          {% if request.user.is_authenticated %}
+
+          <a class="mx-1" href="{% url 'logout' %}"><button type="button"
+              class="btn btn-outline-danger">Logout</button></a>
+
+          {% else %}
+
+          <a class="mx-1" href="{% url 'login' %}"><button type="button" class="btn btn-outline-primary">Log
+              In</button></a>
+
+          <a class="mx-1" href="{% url 'signup' %}"><button type="button" class="btn btn-outline-success">Sign
+              Up</button></a>
+
+
+
+          {% endif %}
+
+
+
+
+
+
+        </form>
+      </div>
+    </nav>
+  </div>
+  {% block body %}
+
+  {% endblock body %}
+
+
+{% block footer %}
+  <!-- last footer  -->
+  <footer class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
+        <small class="d-block mb-3 text-muted">© 2017-2020</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="{% url 'faqs' %} ">FAQs</a></li>
+          <li><a class="text-muted" href="{% url 'contactus' %} ">Contact Us</a></li>
+          <li><a class="text-muted" href="{% url 'careers' %} ">Careers</a></li>
+          <li><a class="text-muted" href="{% url 'aboutus' %} ">About us</a></li>
+         
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Resource name</a></li>
+          <li><a class="text-muted" href="#">Another resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="{% url 'team' %}">Team</a></li>
+          <li><a class="text-muted" href="{% url 'location' %}">Locations</a></li>
+          <li><a class="text-muted" href="{% url 'copyrightpolicy' %}">Copyright Policy</a></li>
+          <li><a class="text-muted" href="{% url 'termsofus' %}">Terms of us</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer> 
+{% endblock footer %}
+
+
+
+
+
+  <script src="{% static 'core/js/jquery.js' %}"></script>
+  <script src="{% static 'core/js/popper.js' %}"></script>
+  <script src="{% static 'core/js/bootstrap.js' %}"></script>
+</body>
+
+</html>

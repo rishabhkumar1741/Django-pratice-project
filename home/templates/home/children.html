@@ -1,0 +1,98 @@
+{% extends 'core/core.html' %}
+{% load static %}
+
+{% block headdata %}
+
+<link rel="stylesheet" href=" {% static 'home/css/font.css' %} ">
+
+{% endblock headdata %}
+
+
+
+{% block body %}
+<!-- imagecard -->
+  <div class="container">
+    <div class="card bg-dark text-white">
+      <img src="{% static 'home/img/12.jpg' %}" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h5 class="card-title text-right">Sponsor mid-day meals to
+          children</h5>
+        <p class="card-text text-right">Donations will help provide mid-day meals to children</p>
+      
+      </div>
+    </div>
+  </div>
+
+ <!-- 1row and 2 col -->
+<div class="container">
+  <div class="row">
+    <!-- col1  -->
+
+    <div class="col-6 my-3 border bg-light ">
+        <h3 class="eve my-3 text-center" >
+            About the cause: Children
+        </h3>
+
+        <p>Help poor children fight their way out of poverty. When it is hard to afford necessities like food, shelter, and clothing; education becomes a luxury that the poor give up. Illiteracy then leads to further poverty. Donate for child education in India, support them with fees, school supplies, footwear, transport and opportunities to showcase their talents.</p>
+        <h3 class="eve my-3 text-center " >
+          Mid-day Meals
+      </h3>
+      <P>
+        21% of India's children are severely underweight. Hungry children can not build the country's future. For India's poor children, the mid-day meal at school is their only proper meal in a day. Feed our children and their hopes by donating mid-day meals to our starving children in need to help them fight starvation and malnutrition, so they don’t have to live and learn on a hungry stomach.
+      </P>
+      <h3 class="eve my-3 text-center"  >
+        Extreme Need
+
+    </h3>
+    <P>
+      Those in extreme need are usually socially excluded and face a lack of basic necessitates for reasons like living in underserved areas or social stigma of being affected with an incurable illness. Donate to those in extreme need and help them with resources like food, medical care, livelihood resources, sanitation, education, etc. to enable them to lead a normal life.
+    </P>
+    <h3 class="eve my-3 text-center"  >
+      Primary Education
+  </h3>
+  <P>
+    20 Million children in India do not go to school. Millions of children are still denied their right to education because of poverty. Donate for the education of poor children and support them with necessities like tuition fees, school supplies, footwear, transport, etc. Help them build a future that will make them escape poverty passed from generation to generation.
+  </P>
+  <h3 class="eve my-3 text-center" >
+    Under Funded
+</h3>
+<P>
+  Donate to underfunded programs that are doing great work to provide the poor with necessities like food, shelter, education, senior care, and healthcare. These nonprofits are struggling to continue to help people as they are not receiving the necessary support. Help them with their efforts with your donations.
+</P>
+
+
+    </div>
+
+    <!-- col2 -->
+
+    <div class="col-6  my-3 border bg-light ">
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="{% static 'home/img/14.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Support the living expenses of an orphan with HIV
+            by 
+            Snehalaya</h5>
+          
+          <a href="{% url 'payment' %}" class="btn btn-primary">Rs 1280 per month</a>
+        </div>
+      </div>
+
+      <div class="card my-3 mx-auto" style="width: 18rem;">
+        <img src="{% static 'home/img/13.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Support a child suffering from cancer with monthly rations
+            by 
+            St Jude India Childcare Centres</h5>
+          
+          <a href="{% url 'payment' %}" class="btn btn-primary">rs 1632 per month</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+{% endblock body %}
+
